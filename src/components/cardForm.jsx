@@ -3,12 +3,22 @@
 import { useState } from "react";
 
 export const CardForm = () => {
-    const [name, setName] = useState("initialvalue"); //rerender
+    const [counter, setCounter] = useState(0); //rerender
+
+    function handleIncrement(){
+        setCounter((currentValue) => currentValue + 1);
+    };
+
+
+    function handleDecrement(){
+        setCounter((currentValue) => currentValue - 1)
+    }
 
   return (
     <div>
-        <div>{name}</div>
-        <input onChange={(event) => setName(event.target.value)} className="border p-2"/>
+        <div>Number: {counter}</div>
+        <button onClick={handleIncrement}>Increment</button>
+        <button onClick={handleDecrement}>Decrement</button>
     </div>
   );
 };

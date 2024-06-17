@@ -2,6 +2,7 @@ import { Header } from "../components/header";
 import { Footer } from "../components/footer";
 import { Card } from "@/components/card";
 import { Button } from "@/components/button";
+import { DashboardTemplate } from "@/components/dashboard/dashboard.template";
 
 
 export default function Home() {
@@ -15,8 +16,7 @@ export default function Home() {
 
 
   return (
-    <div>
-      <Header />
+    <DashboardTemplate>
       <main className="grid grid-cols-3 gap-4">
         {students.map((student) => {
           return <Card key={student.name} {...student} />
@@ -32,7 +32,6 @@ export default function Home() {
         <div>+</div>
         <div>Hello Secondary</div>
       </Button>
-      <Footer />
-    </div>
+    </DashboardTemplate>
   );
 }

@@ -5,11 +5,13 @@
 @layer base {
     input, 
     textarea {
-        @apply block w-full border-2 p-3 rounded-lg;
+        @apply block w-full border-2 p-3 rounded-lg mb-4;
     }
 
 
     button {
-        @apply bg-indigo-600 text-white px-3 py-2 rounded-lg
+        @apply bg-sky-300 text-white px-3 py-2 rounded-[8px]
     }
+    
+
 }

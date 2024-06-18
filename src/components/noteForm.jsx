@@ -25,9 +25,9 @@ export const NoteForm = () => {
 
   return (
     <div>
-        <input value={title} onChange={(e) => setTitle(e.target.value)} />
-        <textarea value={content} onChange={(e) => setContent(e.target.value)}></textarea>
-        <button onClick={handleCreateData}>Create</button>
+        <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title"/>
+        <textarea value={content} onChange={(e) => setContent(e.target.value)} placeholder="Take notes..."></textarea>
+        <button onClick={handleCreateData}>Write</button>
     </div>
   );
 };

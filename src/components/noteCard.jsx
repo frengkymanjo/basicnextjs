@@ -17,10 +17,10 @@ export const NoteCard = ({ item }) => {
     }
 
   return (
-    <div>
-        <h3 className="text-lg font-bold">{item.title}</h3>
-        <p className="text-sm text-slate-500">{item.content}</p>
-        <button onClick={handleDeleteData}>Delete</button>
+    <div className="p-4 bg-sky-100 rounded-[20px]">
+        <h3 className="bg-amber-200 px-4 py-1 flex-col rounded-[8px] justify-center items-center gap-2.5 inline-flex text-lg font-medium text-black">{item.title}</h3>
+        <p className="text-sm font-normal mt-2 text-black mb-4">{item.content}</p>
+        <button onClick={handleDeleteData}>Remove</button>
     </div>
   );
 };
